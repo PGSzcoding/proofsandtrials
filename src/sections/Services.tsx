@@ -1,4 +1,4 @@
-import { Award, CircleArrowRight, CircleGauge, HardHat, SearchCheck, SquareCheckBig } from "lucide-react";
+import { Award, CircleGauge, HardHat, SearchCheck, SquareCheckBig } from "lucide-react";
 import Container from "../components/Container";
 
 const services = [
