@@ -74,6 +74,10 @@ export default function AdminCertificates() {
   }
   }
 
+  function handleDelete(){
+    
+  }
+
   return (
     <main className="h-screen">
       
@@ -123,7 +127,7 @@ export default function AdminCertificates() {
                       Ver
                     </button>
 
-                    <button  onClick={() => handleDelete(item.key)}  className="rounded-full border border-red-300 px-5 py-2 text-sm font-semibold text-red-500 transition hover:bg-red-500 hover:text-white" >
+                    <button  onClick={() => handleDelete()}  className="rounded-full border border-red-300 px-5 py-2 text-sm font-semibold text-red-500 transition hover:bg-red-500 hover:text-white" >
                       Borrar
                     </button>
                   </div>
