@@ -1,50 +1,81 @@
-import { Award, CircleGauge, HardHat, SearchCheck, SquareCheckBig } from "lucide-react";
+//import { Award, CircleGauge, HardHat, SearchCheck, SquareCheckBig } from "lucide-react";
+import { SquareCheckBig, Gauge, Award, SearchCheck, CircleGauge } from "lucide-react";
 import Container from "../components/Container";
+import { Link } from "react-router-dom";
 
 const services = [
-  { title: "Pruebas de Hermeticidad, hidrostática ", icon: <CircleGauge size={36}/>},
-    { title: "CERTIFICACIONES", icon: <Award size={36} />, description: "Quinta rueda, King pin,tornamesa, Tren de apoyo, Línea de vida"},
-  { title: "INSPECCION ELEMENTOS DE IZAJE ", icon: <HardHat size={36}/>, description: '(Cadenas, Grilletes, Raches, Pasadores, Platos, Gancho, Poleas, Anillos) ' },
-  { title: "CERTIFICACION DE MONTACARGA", icon: <SearchCheck size={36} />,description:'Inspección de uñas y espejo' },
-  { title: "CERTIFICACION DE SOLDADURA EN GENERAL ", icon: <SquareCheckBig size={36} /> },
+  {
+    title: "Certificación de quinta rueda ",
+    icon: Gauge,
+  },
+  {
+    title: "Certificación de King pin ",
+    icon: Award,
+  },
+  {
+    title: "Certificación de tornamesa ",
+    icon: SquareCheckBig,
+  },
+  {
+    title: "Certificación de tren de apoyo ",
+    icon: SearchCheck,
+  },
+  {
+    title: "Pruebas de Hermeticidad, hidrostática",
+    icon: CircleGauge,
+  },
+  {
+    title: "Certificación de Mondacarga ",
+    icon: SearchCheck,
+  },
+  
+  {
+    title: "INSPECCION ELEMENTOS DE IZAJE",
+    icon: SearchCheck,
+  },
+  {
+    title: "Venta de repuestos originales",
+    icon: SearchCheck,
+  },
+  {
+    title: "Inspección de cama bajas ",
+    icon: SearchCheck,
+  },
 ];
+
 
 export default function Services() {
   return (
-    <section id="services" className="bg-white py-20">
+    <section id="services" className="bg-white pt-20 lg:pb-35 pb-20">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-bold text-slate-800">
-            Nuestros Servicios
-          </h2>
-
-          <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-black" /> {/*bg-blue-700*/}
-      
+          <h2 className="text-4xl font-bold text-slate-800">Nuestros Servicios</h2>
+          <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-sky-400" /> {/*bg-blue-700*/}
         </div>
 
-<div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-  {services.map((service) => (
-    <article
-      key={service.title}
-      className="flex min-h-[280px] flex-col items-center justify-center rounded-2xl bg-slate-50 p-6 text-center transition hover:-translate-y-2 hover:shadow-lg"
-    >
-      <div className="mb-8 flex h-24 w-24 items-center justify-center rounded-full border-2 border-sky-400 text-sky-400">
-        {service.icon}
-      </div>
+        <div className="grid gap-x-16 gap-y-5 md:grid-cols-2 lg:grid-cols-3 mt-10">
+          {services.map((service,index) => {
+            const Icon = service.icon;
+            return (
+              <div key={service.title}
+                className={`group relative ml-10 flex h-24 items-center rounded-r-full bg-slate-100 px-8 pl-16 transition duration-300 hover:bg-sky-400
+                ${index >= 4 ? "hidden md:flex" : "flex"}`}>
+                <div className="absolute -left-10 flex h-20 w-20 items-center justify-center rounded-full border-2 border-slate-500 bg-white text-slate-600 transition duration-300 group-hover:border-sky-400 group-hover:text-sky-400">
+                  <Icon size={32} />
+                </div>
+                <h3 className="text-sm font-bold uppercase tracking-widest text-slate-700 transition group-hover:text-sky-50">
+                  {service.title}
+                </h3>
+              </div>
+            );
+          })}
+        </div>
 
-      <h3 className="text-lg font-bold uppercase tracking-wide text-sky-500">
-        {service.title}
-      </h3>
-
-      {service.description && (
-        <p className="mt-4 text-sm leading-7 text-slate-500">
-          {service.description}
-        </p>
-      )}
-    </article>
-  ))}
-
-</div>
+        <div className="mt-10 flex justify-center">
+          <Link to="/servicios#top" className="rounded-full border-2 border-sky-400 px-10 py-4 font-semibold text-sky-400 hover:text-sky-600 transition hover:border-sky-600">
+            Ver más
+          </Link>
+        </div>
         
       </Container>
     </section>

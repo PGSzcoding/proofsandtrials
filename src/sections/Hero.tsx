@@ -3,7 +3,7 @@ import Container from "../components/Container";
 
 export default function Hero() {
   return (
-    <section className="relative h-[90vh]">
+    <section className="relative h-[90vh]" id="inicio">
       <img
         src={heroImage}
         className="absolute inset-0 h-full w-full object-cover"

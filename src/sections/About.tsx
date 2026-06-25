@@ -5,7 +5,7 @@ import visionImage from "../assets/mision.png";
 
 export default function About() {
   return (
-    <section id="about" className="bg-white pt-24 pb-10">
+    <section id="nosotros" className="bg-white pt-24 pb-10">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl font-bold text-slate-800">
@@ -61,7 +61,7 @@ function InfoCard({ icon, title, text, variant, image }: InfoCardProps) {
   const styles =
     variant === "blue"
       ? "bg-sky-400"
-      : "bg-neutral-900";
+      : "bg-slate-950";
 
   return (
     <article className={`${styles} relative overflow-hidden px-8 py-20 text-center text-white`}>
