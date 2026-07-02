@@ -61,7 +61,7 @@ function InfoCard({ icon, title, text, variant, image, i = 0 }: InfoCardProps) {
 
       <Fade delay={i*200} >
         <div className="relative z-10">
-          <div className="mb-6 flex justify-center w-[26]"><Icon /></div>
+          <div className="mb-6 flex justify-center w-full"><Icon /></div>
 
           <h3 className="text-2xl font-semibold">{title}</h3>
           <div className="mx-auto my-5 h-1 w-12 rounded-full bg-white/70" />

@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 
 export default function ServiceMontacarga({title,subtitle,items}:ServicioTransporteProps){
    
-    return <section className=" px-20  pt-17 pb-10 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-800 ">
+    return <section className=" md:px-20 px-10  pt-17 pb-10 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-800 ">
         
         <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
@@ -22,7 +22,7 @@ export default function ServiceMontacarga({title,subtitle,items}:ServicioTranspo
                 </Fade>
             </div>
 
-            <div className="min-w-0 p-8">
+            <div className="min-w-0 md:p-8 p-2">
             <Fade direction="right">
 
                 <Swiper

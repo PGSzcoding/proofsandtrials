@@ -70,14 +70,14 @@ export default function Header() {
           </Link>
     
           {/* Mobile button */}
-          <button onClick={() => setOpen(!open)} className="cursor-pointer text-3xl md:hidden">
+          <button onClick={() => setOpen(!open)} className={`cursor-pointer text-3xl md:hidden ${location.pathname === "/servicios"? "text-white": ""}`}>
             {open ? "×" : "☰"}
           </button>
 
         </nav>
         {/* Mobile menu */}
         <div className={`overflow-hidden transition-all duration-300 md:hidden ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
-          <div className="flex flex-col gap-6 border-t border-slate-100 py-8 text-center font-medium text-slate-700 md:hidden">
+          <div className={`flex flex-col gap-6 pb-8 pt-4 text-center font-medium md:hidden ${location.pathname === "/servicios"? "text-white ": "text-slate-700 "}`}>
 
             <Link  to="/#inicio" onClick={() => setOpen(false)}>Inicio</Link>
             <Link  to="/#nosotros" onClick={() => setOpen(false)}>Nosotros</Link>
