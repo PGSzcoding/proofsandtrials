@@ -3,7 +3,6 @@ import certificateImage from "../assets/consulta.png";
 import { useState } from "react";
 import SelectField from "../components/SelectField";
 import { Fade } from "react-awesome-reveal";
-import Button from "../components/UI/Button";
 import { CertificateOptions } from "../data/general";
 
 export default function CertificatePage() {
@@ -46,9 +45,9 @@ export default function CertificatePage() {
                       <input type="text"placeholder="Ej. CERT-000001"
                       className="w-full rounded-full border border-slate-300  px-6 py-4 outline-none transition focus:border-sky-700"/>
                     </>
-                    <Button type="submit" variant="primary" className="mt-5 w-full px-8 py-4 font-semibold">
+                    <button type="submit"  className="inline-flex items-center justify-center rounded-full   transition duration-300 cursor-pointer mt-5 w-full px-8 py-4 font-semibold bg-sky-500 text-white hover:bg-sky-600">
                       Consultar
-                    </Button>
+                    </button>
                   </Fade>
                   }
                 </form>

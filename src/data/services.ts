@@ -12,12 +12,12 @@ import poleasImage from "../assets/servicios/s_7.png";
 import anillosImage from "../assets/servicios/s_7.png";
 import type { TransporteItem } from "../types/services";
 
-interface ServiceType {
+export interface ServiceType {
     title: string,
     subtitle: string,
     items: TransporteItem[]
 }
-export const services:ServiceType = [
+export const services:ServiceType[] = [
     {
        title: 'Sector Transporte',
        subtitle: "(Carga Seca y Liquida)",
@@ -30,7 +30,8 @@ export const services:ServiceType = [
                 
                  {
                     title: "Certificación de tornamesa",
-                    description:"Evaluación estructural y funcional del sistema de acople para prevenir fallas operativas"
+                    description:"Evaluación estructural y funcional del sistema de acople para prevenir fallas operativas",
+                    image: null
                 },
                 {
                     title: "Certificación de king pin",
@@ -39,7 +40,8 @@ export const services:ServiceType = [
                 },
                  {
                     title: "Certificación de tren de apoyo",
-                    description:"Inspección técnica que asegura la estabilidad y seguridad del vehículo durante carga, descarga y estacionamiento."
+                    description:"Inspección técnica que asegura la estabilidad y seguridad del vehículo durante carga, descarga y estacionamiento.",
+                    image: null
                 },
                 {
                     title: "Pruebas de hermeticidad e hidrostáticas",
@@ -59,34 +61,35 @@ export const services:ServiceType = [
        items: [
             {
                 title: 'Cadenas',
+                description: '',
                 image: cadenaImage
             },
             {
-                title: 'Grilletes',
+                title: 'Grilletes',description: '',
                 image: grilletrImage
             },
             {
-                title: 'Raches',
+                title: 'Raches',description: '',
                 image: rachesImage
             },
             {
-                title: 'Pasadores',
+                title: 'Pasadores',description: '',
                 image: pasadoresImage
             },
             {
-                title: 'Platos',
+                title: 'Platos',description: '',
                 image: platosImage
             },
             {
-                title: 'Gancho',
+                title: 'Gancho',description: '',
                 image:ganchoImage
             },
             {
-                title: 'Poleas',
+                title: 'Poleas',description: '',
                  image:poleasImage
             },
             {
-                title: 'Anillos',
+                title: 'Anillos',description: '',
                 image: anillosImage
             },
             
@@ -97,11 +100,11 @@ export const services:ServiceType = [
        subtitle: "Realizamos la certificación técnica de montacargas con el objetivo de garantizar la seguridad operativa, el correcto funcionamiento del equipo y el cumplimiento de las normas vigentes.",
        items: [
             {
-                title: "Inspección de uñas",
+                title: "Inspección de uñas",image: null,
                 description: "Evaluación del estado estructural, desgaste y alineación de las uñas del montacargas para asegurar una manipulación segura de la carga. ",
             },
             {
-                title: "Inspección de espejo",
+                title: "Inspección de espejo",image: null,
                 description: "Verificación del respaldo de carga (espaldar o espejo) para garantizar su integridad y correcta sujeción durante las maniobras"
             }
         ]

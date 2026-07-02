@@ -18,8 +18,9 @@ export default function ServicesGallery() {
           <div className="grid auto-rows-[260px] grid-cols-1 gap-3 md:grid-cols-4">
             {servicesGalery.map((item) => (
               <article key={item.title}  className={`group relative overflow-hidden rounded-md ${item.size}`}>
+                {item.image ? 
                 <img  src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"/>
-
+                  :''}
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
                 <div className="absolute inset-0 bg-sky-600/70 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100" />
 

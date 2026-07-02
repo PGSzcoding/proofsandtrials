@@ -1,7 +1,6 @@
 import { Fade } from "react-awesome-reveal";
 import heroImage from "../assets/hero.png";
 import Container from "../components/Container";
-import Button from "../components/UI/Button";
 
 export default function Hero() {
   return (
@@ -18,7 +17,7 @@ export default function Hero() {
               Soluciones confiables con altos estándares de calidad y personal capacitado.
             </p>
 
-            <Button href="#contact" variant="secondary" className="mt-10">Solicita tu servicio</Button>
+            <a href="#contact"  className="inline-flex items-center justify-center rounded-full px-10 py-4 text-lg font-medium transition duration-300 cursor-pointer bg-white text-slate-900 hover:bg-sky-400 hover:text-white mt-10">Solicita tu servicio</a>
           </Fade>
           </div>
         </Container>
