@@ -21,6 +21,8 @@ interface UploadUrlResponse {
 export async function getFiles():Promise<FilesResponse>{
   const response = await fetch(`${ENV.API_URL}/files`);
   const data = await response.json();
+  console.log(data)
+
   if (!response.ok) {
     throw new Error(data.error || "Error obteniendo archivos");
   }
@@ -40,6 +42,17 @@ export async function getDownloadUrl(key: string): Promise<DownloadResponse> {
     throw new Error(data.error || "Error descargando archivo");
   }
   return data;
+}
+
+export async function deleteCertificate(key:string){
+
+  console.log(`${key}`)
+  const response = await fetch(`${ENV.API_URL}/files/${key}`,{method:"DELETE"});
+
+  if(!response.ok){
+    throw new Error("Delete failed");
+  }
+  return response.json();
 }
 
 export async function uploadFile(file: File): Promise<void> {

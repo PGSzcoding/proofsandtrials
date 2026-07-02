@@ -12,7 +12,7 @@ export default function AdminHeader(){
 
     return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
-              <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+              <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-6">
     
                 <Link  to="/admin/certificados" className="flex items-center gap-3">
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-sky-400 text-white">

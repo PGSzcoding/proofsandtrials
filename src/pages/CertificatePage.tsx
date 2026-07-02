@@ -1,52 +1,58 @@
 import Container from "../components/Container";
 import certificateImage from "../assets/consulta.png";
+import { useState } from "react";
+import SelectField from "../components/SelectField";
+import { Fade } from "react-awesome-reveal";
+import Button from "../components/UI/Button";
+import { CertificateOptions } from "../data/general";
 
 export default function CertificatePage() {
+  const labelClasses = 'mb-2 block text-sm font-medium text-slate-700'
+  const [certificateType,setCertificateType] = useState<string>("")
 
   return (
-    <main className=" pt-20">
+    <main className=" pt-10">
       <Container className="min-h-[calc(100vh-260px)] flex items-center">
-        <div className="grid w-full items-center gap-12 lg:grid-cols-2 pt-10 pb-20">
+        <div className="grid w-full items-center gap-12 lg:grid-cols-2  pb-20">
           {/* Image */}
-          <div className="order-2 lg:order-1 relative  overflow-hidden rounded-3xl bg-slate-100 shadow-xl lg:block">
-            <img src={certificateImage} alt="Consulta de certificados P&T" className="h-full w-full object-cover"/>
-            <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
-            <div className="absolute bottom-5 left-8 right-8 text-white">
-              <p className="text-sm font-semibold uppercase tracking-widest text-sky-300">
-                P&T S.A.S.
-              </p>
-            <p className=" text-sm leading-6 text-white/80">
-              Certificados confiables
-            </p>
-          </div>
-        </div>
+          <Fade direction="left">
+            <div className="order-2 lg:order-1 relative  overflow-hidden rounded-3xl bg-slate-100 shadow-xl lg:block">
+                <img src={certificateImage} alt="Consulta de certificados P&T" className="h-full w-full object-cover"/>
+                <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
+                <div className="absolute bottom-5 left-8 right-8 text-white">
+                  <p className="text-sm font-semibold uppercase tracking-widest text-sky-300">P&T S.A.S.</p>
+                  <p className=" text-sm leading-6 text-white/80">Certificados confiables</p>
+              </div>
+            </div>
+          </Fade>
 
-          {/* Content */}
           <div className="order-1 lg:order-2 ">
-            <span className="text-sm font-semibold uppercase tracking-widest text-sky-600">Certificados</span>
+            <Fade cascade >
+                <span className="text-sm font-semibold uppercase tracking-widest text-sky-600">Certificados</span>
+                <h1 className="mt-4 text-5xl font-bold leading-tight text-slate-800">Consulta tu certificado</h1>
 
-            <h1 className="mt-4 text-5xl font-bold leading-tight text-slate-800">Consulta tu certificado</h1>
+                <p className="mt-6 max-w-xl text-lg leading-8 text-slate-500">
+                  Ingresa el código de tu certificado para verificarlo y descargar
+                  el documento correspondiente.
+                </p>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-500">
-              Ingresa el código de tu certificado para verificarlo y descargar
-              el documento correspondiente.
-            </p>
+                <form className="mt-10 max-w-md">
+                  <SelectField label="Tipo de certificado" value={certificateType} onChange={setCertificateType}
+                  placeholder="Selecciona un tipo" options={CertificateOptions} className="mb-4"/>
 
-            <form className="mt-10 max-w-md">
-              <label className="mb-2 block text-sm font-medium text-slate-700">
-                Número de certificado
-              </label>
-
-              <input type="text"placeholder="Ej. CERT-000001"
-                className="w-full rounded-full border border-slate-300  px-6 py-4 outline-none transition focus:border-sky-700"/>
-
-              <button type="submit" className="mt-5 w-full rounded-full  text-white bg-sky-400 px-8 py-4 font-semibold text-whitetransition hover:bg-sky-500">
-                Consultar
-              </button>
-
-              
-            </form>
-          
+                  {certificateType && <Fade cascade>
+                    <>
+                      <label className={labelClasses}> Número </label>
+                      <input type="text"placeholder="Ej. CERT-000001"
+                      className="w-full rounded-full border border-slate-300  px-6 py-4 outline-none transition focus:border-sky-700"/>
+                    </>
+                    <Button type="submit" variant="primary" className="mt-5 w-full px-8 py-4 font-semibold">
+                      Consultar
+                    </Button>
+                  </Fade>
+                  }
+                </form>
+            </Fade>
           </div>
         </div>
       </Container>

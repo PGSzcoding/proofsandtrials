@@ -7,8 +7,8 @@ export default function MainLayout() {
   return (
     <>
       <ScrollToHash />
-      <Header />
 
+      <Header />
       <Outlet />
 
       <Footer />
