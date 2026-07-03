@@ -6,7 +6,7 @@ import { menuItems } from "../data/general";
 export default function Footer() {
   return (
     <Fade >
-      <footer className="bg-slate-950 text-white">
+      <footer className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-800 text-white">
         <Container>
           <div className="flex flex-col items-center justify-center py-6  text-center">
             <Link to="/#inicio" className="text-3xl font-semibold ">P & T</Link>

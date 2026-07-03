@@ -14,16 +14,17 @@ export default function CertificatePage() {
       <Container className="min-h-[calc(100vh-260px)] flex items-center">
         <div className="grid w-full items-center gap-12 lg:grid-cols-2  pb-20">
           {/* Image */}
-          <Fade direction="left">
-            <div className="order-2 lg:order-1 relative  overflow-hidden rounded-3xl bg-slate-100 shadow-xl lg:block">
-                <img src={certificateImage} alt="Consulta de certificados P&T" className="h-full w-full object-cover"/>
+            <div className="order-2 lg:order-1 relative  overflow-hidden rounded-3xl   lg:block">
+          <Fade >
+                <img src={certificateImage} alt="Consulta de certificados P&T" className="destello h-full w-full object-cover"/>
                 <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-5 left-8 right-8 text-white">
                   <p className="text-sm font-semibold uppercase tracking-widest text-sky-300">P&T S.A.S.</p>
                   <p className=" text-sm leading-6 text-white/80">Certificados confiables</p>
               </div>
-            </div>
           </Fade>
+
+            </div>
 
           <div className="order-1 lg:order-2 ">
             <Fade cascade >

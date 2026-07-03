@@ -41,7 +41,7 @@ export default function ServiceMontacarga({title,subtitle,items}:ServicioTranspo
                                         </div>
                                         <div className="h-px flex-1 mx-4 bg-slate-200"></div>
                                     </div>
-                                    <Fade cascade direction="up">
+                                    <Fade  >
                                     <h3 className="text-2xl font-bold leading-tight text-white">{item.title}</h3>
                                     <p className="mt-6 flex-1 text-[17px] leading-8 text-slate-400">
                                         {item.description}
