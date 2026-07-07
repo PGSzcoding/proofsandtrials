@@ -10,7 +10,7 @@ import platosImage from "../assets/servicios/s_5.png";
 import ganchoImage from "../assets/servicios/s_6.png";
 import poleasImage from "../assets/servicios/s_7.png";
 import anillosImage from "../assets/servicios/s_7.png";
-import type { TransporteItem } from "../types/services";
+import type { NormsProps, TransporteItem } from "../types/services";
 
 export interface ServiceType {
     title: string,
@@ -129,3 +129,35 @@ export const servicesGalery = [
     size: "md:col-span-1",
   },
 ]
+
+export const normasTransporte: NormsProps = {
+    description: " Los procesos se ejecutan bajo las prácticas recomendadas por ASNT SNT-TC-1A  Ed2016. Asimismo, nuestros servicios cumplen con los requisitos establecidos por las normas técnicas vigentes:",
+    norms: [
+        {
+            title: "ASTM A255/M-08 - ASME-VIII DIV1 APEN 8",
+            description: "Inspección por líquidos penetrantes a materiales metálicos y soldaduras."
+        },
+        {
+            title: "ASTM A275/M-08",
+            description: "Inspección mediante partículas magnéticas."
+        },
+        {
+            title: "SAE J700",
+            description: "Requisitos dimensionales exactos para el perno rey (kingpin)"
+        }
+    ]
+}
+
+export const normasIzaje: NormsProps = {
+    description: " Los procesos se ejecutan bajo las prácticas recomendadas por ASNT SNT-TC-1A  Ed2016. Asimismo, nuestros servicios cumplen con los requisitos establecidos por las normas técnicas vigentes:",
+    norms: [
+        {
+            title: "ANSI/SAlA A92.2",
+            description: "Certificación de camión canasta"
+        },
+        {
+            title: "ANSI Z359.18",
+            description: "Certificacion líneas de vida de acuerdo a la normatividad para trabajo en alturas 4272/2021"
+        }
+    ]
+}

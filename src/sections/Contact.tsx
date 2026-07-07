@@ -35,17 +35,30 @@ export default function Contact() {
               <div className="divide-y divide-white/5 space-y-4">
                 {contactInfo.map((item,i) => {
                     const Icon = item.icon;
-                  return (
-                  <div key={`${item.label}${i}x`} className="flex items-start gap-4 pt-4 first:pt-0 group transition-all">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-500 text-white shadow-lg shadow-sky-500/10 group-hover:bg-sky-400 transition-colors duration-300">
-                      <Icon/>
-                    </div>
+                  const Wrapper = item.href ? "a" : "div";
 
-                    <div className="flex flex-col min-w-0 wrap-break-word">
-                      <span className="text-xs font-semibold text-sky-400 uppercase tracking-wider">{item.label}</span>
-                      <span className="mt-0.5 text-sm md:text-base font-medium text-slate-900 leading-snug">{item.value}</span>
-                    </div>
-                  </div>
+                  return (
+
+<Wrapper
+  key={`${item.label}${i}x`}
+  href={item.href}
+  target={item.href ? "_blank" : undefined}
+  rel={item.href ? "noopener noreferrer" : undefined}
+  className="flex items-start gap-4 pt-4 first:pt-0 group transition-all"
+>
+  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-500 text-white shadow-lg shadow-sky-500/10 group-hover:bg-sky-400 transition-colors duration-300">
+    <Icon />
+  </div>
+
+  <div className="flex min-w-0 flex-col break-words">
+    <span className="text-xs font-semibold uppercase tracking-wider text-sky-400">
+      {item.label}
+    </span>
+    <span className="mt-0.5 text-sm font-medium leading-snug text-slate-900 md:text-base">
+      {item.value}
+    </span>
+  </div>
+</Wrapper>
                 )})}
               </div>
             </div>

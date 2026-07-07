@@ -1,10 +1,12 @@
 import { Fade } from "react-awesome-reveal";
 import LineSeparator from "../components/LineSeparator";
 import type { ServicioTransporteProps } from "../types/services";
+import RegulationsAccordion from "./RegulationsAccordion";
+import { normasIzaje } from "../data/services";
 
 export default function ServiceInspection({title,subtitle,items}:ServicioTransporteProps){
     return (
-        <section className="md:mt-45 md:mb-30 mt-25 mb-20">
+        <section className="md:mt-40 md:mb-30 mt-25 mb-20">
             <div className="mx-auto max-w-2xl text-center">   
                 <Fade direction="up" cascade>
                 <h2 className="text-4xl font-bold text-slate-800">{title}</h2>
@@ -33,6 +35,10 @@ export default function ServiceInspection({title,subtitle,items}:ServicioTranspo
                 })}
             </div>
             </Fade>
+            <div className="mt-15">
+            <RegulationsAccordion description={normasIzaje.description} norms={normasIzaje.norms} />
+
+            </div>
 
         </section>
     )

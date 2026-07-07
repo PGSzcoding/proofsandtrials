@@ -6,7 +6,7 @@ import { AboutInfo } from "../data/general";
 
 export default function About() {
   return (
-    <section id="nosotros" className=" pt-24 pb-10">
+    <section id="nosotros" className=" pt-24 ">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <Fade direction="down" >
@@ -17,7 +17,7 @@ export default function About() {
               <LineSeparator />
             </Zoom>
             <p className="mt-6 text-sm leading-7 text-slate-600">
-              Proofs and Trials P&T S.A.S. es una compañía colombiana especializada en ensayos no destructivos, aplicando diferentes métodos de inspección bajo altos estándares de calidad, confiabilidad y compromiso con nuestros clientes.
+              <b>Proofs and Trials P&T S.A.S.</b> es una compañía colombiana <b>con más de 7 años de experiencia</b>, especializada en <b>ensayos no destructivos</b>, que aplica diversos métodos de inspección bajo <b>altos estándares de calidad</b>, avalados por los entes de control.
             </p>
           </Fade>
         </div>

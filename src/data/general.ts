@@ -14,16 +14,19 @@ export const contactInfo = [
     label: "Telefono",
     value: "313 323 81 46",
     icon: Phone,
+    href: "https://wa.me/+573133238146"
   },
   {
     label: "Telefono",
     value: "313 487 99 83",
     icon: Phone,
+    href: "https://wa.me/+573134879983"
   },
   {
     label: "Email",
-    value: "gerenciapytsas@gmail.com  ",
+    value: "gerenciapytsas@gmail.com",
     icon: Mail,
+    href: "mailto:gerenciapytsas@gmail.com"
   },
   {
     label: "Direccion",
@@ -37,7 +40,7 @@ export const AboutInfo = [
         image: misionImage,
         icon: RefreshCcw,
         title:"Nuestra Historia",
-        text:"Proofs And Trials P&T SAS es una compañía colombiana especializada en la realización de ensayos no destructivos mediante diferentes métodos de inspección, garantizando confiabilidad, seguridad y cumplimiento normativo. Nuestro compromiso es brindar soluciones técnicas de alta calidad y generar relaciones de largo plazo con nuestros clientes.",
+        text:"Proofs And Trials P&T SAS es una compañía colombiana con más de 7 años de experiencia, especializada en la realización de ensayos no destructivos mediante diferentes métodos de inspección, garantizando confiabilidad, seguridad y cumplimiento normativo. Nuestro compromiso es brindar soluciones técnicas de alta calidad y generar relaciones de largo plazo con nuestros clientes.",
         variant:"blue",
         i:1
     },
@@ -60,15 +63,19 @@ export const AboutInfo = [
 
 export const CertificateOptions = [
     {
-      label: "Pruebas de hermeticidad",
+      label: "Pruebas de Hermeticidad",
       value: "hermeticidad",
     },
     {
-      label: "Certificación de montacarga",
-      value: "montacarga",
+      label: "Certificación en Elementos de Izaje",
+      value: "izaje",
     },
     {
       label: "Soldadura",
       value: "soldadura",
+    },
+    {
+      label: "Partículas Magnéticas",
+      value: "particula_magneticas",
     },
   ]

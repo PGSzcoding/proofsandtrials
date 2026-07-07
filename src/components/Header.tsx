@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import logoImage from "../assets/logo-2.png";
+import logoImage2 from "../assets/logo-3.png";
 import Container from "./Container";
 import { useEffect, useState } from "react";
 import { menuItems } from "../data/general";
@@ -9,8 +10,9 @@ export default function Header() {
     const [activeSection, setActiveSection] = useState("inicio");
     const location = useLocation();
 
-    const logo = <a href="/#"><img  src={logoImage}  alt="Logo" className="md:h-18 w-auto h-15" /></a>
+    const logo = <a href="/#"><img  src={location.pathname !== "/servicios"?logoImage:logoImage2}  alt="Logo" className="md:h-18 w-auto h-15" /></a>
      useEffect(() => {
+     
     if (location.pathname !== "/") return;
     const sections = ["inicio", "nosotros", "contacto"]
       .map((id) => document.getElementById(id))

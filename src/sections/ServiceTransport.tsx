@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {  Navigation } from "swiper/modules";
 import TransportCard from "../components/TransportCard";
 import { Fade } from "react-awesome-reveal";
+import RegulationsAccordion from "./RegulationsAccordion";
+import { normasTransporte } from "../data/services";
 
 export default function ServiceTransport({title,subtitle,items}:ServicioTransporteProps){
     const arrows = <div>
@@ -14,7 +16,7 @@ export default function ServiceTransport({title,subtitle,items}:ServicioTranspor
                           <ChevronRight size={22} />
                         </button>
                   </div>
-    return (
+    return (<>
         <section>
             <div className="mx-auto max-w-7xl">
                 <div className="mb-10 max-w-2xl">
@@ -39,7 +41,10 @@ export default function ServiceTransport({title,subtitle,items}:ServicioTranspor
                 </div>
                 </Fade>
                     </div>
+        <RegulationsAccordion description={normasTransporte.description} norms={normasTransporte.norms} />
+
         </section>
+     </>
     )
 
 }

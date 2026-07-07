@@ -6,7 +6,7 @@ import Services2Page from "./pages/Services2Page";
 import CertificatePage from "./pages/CertificatePage";
 import AdminLayout from "./layouts/AdminLayout";
 import LoginPage from "./pages/LoginPage";
-import AdminCertificates from "./pages/AdminCertificates";
+import AdminCertificates from "./pages/AdminPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";

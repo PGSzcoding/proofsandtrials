@@ -14,8 +14,15 @@ interface DownloadResponse {
 }
 
 interface UploadUrlResponse {
+  key:string;
   uploadUrl: string;
   headers?: {"Content-Type"?: string;};
+}
+
+interface Metadata{
+  id: string;
+  key: string;
+  type: string;
 }
 
 export async function getFiles():Promise<FilesResponse>{
@@ -55,7 +62,43 @@ export async function deleteCertificate(key:string){
   return response.json();
 }
 
-export async function uploadFile(file: File): Promise<void> {
+export async function saveFileMetadata(data: Metadata) {
+  const token = localStorage.getItem("token");
+
+  const response = await fetch(`${ENV.API_URL}/files`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(data),
+  });
+
+  if (!response.ok) {
+    throw new Error("Error guardando metadata");
+  }
+}
+
+export async function getCertificateById(id: string) {
+  const response = await fetch(`${ENV.API_URL}/certificate`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ id }),
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.error || "No se pudo buscar el certificado");
+  }
+
+  return data;
+}
+
+
+export async function uploadFile(file: File): Promise<{ key: string }>{
   const token = localStorage.getItem("token");
   const contentType = file.type || "application/octet-stream";
 
@@ -66,11 +109,9 @@ export async function uploadFile(file: File): Promise<void> {
   });
 
   const data: UploadUrlResponse = await response.json();
-
   if (!response.ok) {
     throw new Error("Error generando URL de subida");
   } 
-  console.log(data)
 
   const uploadResponse = await fetch(data.uploadUrl, {
     method: "PUT",
@@ -82,5 +123,6 @@ export async function uploadFile(file: File): Promise<void> {
   if (!uploadResponse.ok) {
     throw new Error(`Error al subir archivo (${uploadResponse.status})`);
   }
+  return { key: data.key,};
 }
 

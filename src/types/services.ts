@@ -9,3 +9,8 @@ export interface ServicioTransporteProps {
   subtitle: string;
   items: TransporteItem[];
 }
+
+export interface NormsProps{
+    description: string;
+    norms: {title:string,description:string}[]
+}

@@ -37,3 +37,16 @@ body {
     filter: blur(0);
   }
 }
+
+@keyframes wavesMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.bg-waves {
+  animation: wavesMove 20s linear infinite;
+}

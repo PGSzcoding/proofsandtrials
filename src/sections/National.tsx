@@ -1,5 +1,5 @@
 import Container from "../components/Container";
-import colombiaMap from "../assets/mapa2.png";
+import colombiaMap from "../assets/mapa3.png";
 import { Fade } from "react-awesome-reveal";
 
 export default function National(){
