@@ -1,6 +1,6 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-import {  saveFileMetadata, uploadFile } from "../services/certificates.service";
+import {  saveFileMetadata } from "../services/certificates.service";
 import { Spinner } from "./Spinner";
 
 interface AddFileProps{
