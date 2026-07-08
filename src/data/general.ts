@@ -1,7 +1,6 @@
 import { Eye, Mail, MapPin, Phone, RefreshCcw, Target } from "lucide-react";
 import misionImage from "../assets/historia.png";
 import visionImage from "../assets/vision.png";
-import { href } from "react-router-dom";
 
 export const menuItems = [
       { label: "Inicio", to: "/#inicio", section: "inicio" },
