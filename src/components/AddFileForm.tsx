@@ -1,7 +1,8 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-import {  saveFileMetadata } from "../services/certificates.service";
+import {  saveFileMetadata, uploadFile } from "../services/certificates.service";
 import { Spinner } from "./Spinner";
+import { CertificateOptions } from "../data/general";
 
 interface AddFileProps{
     fileAdded: () => void;
@@ -22,8 +23,8 @@ export function AddFileModal({fileAdded}:AddFileProps){
       setLoading(true);
 
       try {
-        const  key  = 'test2'//await uploadFile(selectedFile);
-        await saveFileMetadata({ id: idPlaca, key, type: tipoArchivo,});
+        const  key  = await uploadFile(selectedFile);
+        await saveFileMetadata({ id: idPlaca, key: key.key, type: tipoArchivo,});
 
         toast.success(`"${selectedFile.name}" subido correctamente`);
         setSelectedFile(null);
@@ -49,7 +50,10 @@ export function AddFileModal({fileAdded}:AddFileProps){
               <select  name="tipoArchivo"  id="tipoArchivo"  value={tipoArchivo}  onChange={handleTipoArchivoChange} 
                 className="w-full rounded-full border border-slate-300 px-4 py-3 outline-none transition focus:border-sky-700 text-sm">
                 <option value="">Selecciona tipo de archivo</option>
-                <option value="hola">tipo 1</option>
+                {CertificateOptions.map(val=>{
+                  return <option value={val.value}>{val.label}</option>
+                })}
+                
               </select>
 
               <input  type="text"  placeholder="Id / Placa" value={idPlaca} onChange={handleIdPlacaChange} className="rounded-full border border-slate-300 px-4 py-3 text-sm"/>

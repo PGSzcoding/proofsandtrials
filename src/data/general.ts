@@ -1,4 +1,4 @@
-import { Eye, Mail, MapPin, Phone, RefreshCcw, Target } from "lucide-react";
+import { Clock, Eye, Mail, MapPin, Phone, RefreshCcw, Target } from "lucide-react";
 import misionImage from "../assets/historia.png";
 import visionImage from "../assets/vision.png";
 
@@ -30,6 +30,11 @@ export const contactInfo = [
     value: "Calle 7 No 87b 53 –  Bogotá D. C  ",
     icon: MapPin,
   },
+  {
+    label: "Horario",
+    value: "Servicio 24/7 a Nivel Nacional ",
+    icon: Clock
+  }
 ];
 
 export const AboutInfo = [
@@ -52,16 +57,27 @@ export const AboutInfo = [
         image:visionImage,
         icon: Eye,
         title:"Nuestra Visión",
-        text:"Consolidarnos como la empresa referente en Colombia en ensayos no destructivos e inspecciones técnicas, destacándonos por la excelencia operativa, el cumplimiento normativo y la satisfacción de nuestros clientes.",
+        text:"Consolidarnos como la empresa referente en Colombia para el año 2030 en ensayos no destructivos e inspecciones técnicas, destacándonos por la excelencia operativa, el cumplimiento normativo y la satisfacción de nuestros clientes.",
         variant:"blue",
         i:1
     }
 ]
 
+/*
+ array: [
+     {val: "GERENCIAS@PYTCOL.COM", href:'mailto:gerenciapytsas@gmail.com'},
+     {val:  "COMERCIAL@PYTCOL.COM", href: "mailto:gerenciapytsas@gmail.com"}
+    ]
+*/
+
 export const CertificateOptions = [
     {
-      label: "Pruebas de Hermeticidad",
-      value: "hermeticidad",
+      label: "Prueba hidrostática anual,",
+      value: "hidrostatica",
+    },
+     {
+      label: "Prueba hidrostática 5 años,",
+      value: "hidrostatica",
     },
     {
       label: "Certificación en Elementos de Izaje",

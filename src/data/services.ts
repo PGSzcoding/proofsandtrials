@@ -5,6 +5,7 @@ import lineasVidaImage from "../assets/servicios/lineas_vida.png";
 import cadenaImage from "../assets/servicios/s_cadenas.png";
 import grilletrImage from "../assets/servicios/s_2.png";
 import rachesImage from "../assets/servicios/s_3.png";
+import espesorImage from "../assets/servicios/espesores.png";
 import pasadoresImage from "../assets/servicios/s_4.png";
 import platosImage from "../assets/servicios/s_5.png";
 import ganchoImage from "../assets/servicios/s_6.png";
@@ -12,6 +13,7 @@ import poleasImage from "../assets/servicios/s_7.png";
 import anillosImage from "../assets/servicios/s_8.png";
 import tornamesaImage from "../assets/servicios/s_9.png";
 import trenImage from "../assets/servicios/s_10.png";
+
 
 import type { NormsProps, TransporteItem } from "../types/services";
 
@@ -25,6 +27,7 @@ export const services:ServiceType[] = [
        title: 'Sector Transporte',
        subtitle: "(Carga Seca y Liquida)",
        items: [
+                
                 {
                     title: "Certificación de quinta rueda",
                     description: "Verificación técnica del sistema de enganche para asegurar una operación segura entre el tractocamión y el semirremolque.",
@@ -38,7 +41,7 @@ export const services:ServiceType[] = [
                     image: kingpinImage,
                 },
                 {
-                    title: "Pruebas de hermeticidad e hidrostáticas",
+                    title: "Pruebas hidrostáticas",
                     description:"Ensayos especializados para verificar la estanqueidad y resistencia de sistemas y componentes, especialmente en transporte de líquidos. ",
                     image: hermeticidadImage,
                 },
@@ -56,6 +59,11 @@ export const services:ServiceType[] = [
                     title: "Certificación de tren de apoyo",
                     description:"Inspección técnica que asegura la estabilidad y seguridad del vehículo durante carga, descarga y estacionamiento.",
                     image: trenImage
+                },
+                {
+                    title: "Certificación de espesores por ultra sonido",
+                    description: "",
+                    image: espesorImage
                 }
        ]
     },
@@ -148,6 +156,14 @@ export const normasTransporte: NormsProps = {
         {
             title: "SAE J700",
             description: "Requisitos dimensionales exactos para el perno rey (kingpin)"
+        },
+        {
+            title: "OP-MN-005 ",
+            description: "Manual para las mediciones de espesor por ultrasonido."
+        },
+         {
+            title: "OP-PR-009",
+            description: "Procedimiento para la inspección de espesor de TANQUES / ASTM E797/ NTC4786-2-2000"
         }
     ]
 }

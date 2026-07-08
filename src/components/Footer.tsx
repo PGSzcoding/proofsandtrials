@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Container from "./Container";
 import { Fade } from "react-awesome-reveal";
 import { menuItems } from "../data/general";
+import { Socials } from "./Socials";
 
 export default function Footer() {
   return (
@@ -18,6 +19,7 @@ export default function Footer() {
                 )
               })}
             </nav>
+            <Socials />
           </div>
           <div className="border-t border-white/10 py-2 text-center text-xs text-white/50">
             Desarrollado por @Paolagtzsal
