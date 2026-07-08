@@ -9,7 +9,10 @@ import pasadoresImage from "../assets/servicios/s_4.png";
 import platosImage from "../assets/servicios/s_5.png";
 import ganchoImage from "../assets/servicios/s_6.png";
 import poleasImage from "../assets/servicios/s_7.png";
-import anillosImage from "../assets/servicios/s_7.png";
+import anillosImage from "../assets/servicios/s_8.png";
+import tornamesaImage from "../assets/servicios/s_9.png";
+import trenImage from "../assets/servicios/s_10.png";
+
 import type { NormsProps, TransporteItem } from "../types/services";
 
 export interface ServiceType {
@@ -28,20 +31,11 @@ export const services:ServiceType[] = [
                     image: quintaRuedaImage,
                 },
                 
-                 {
-                    title: "Certificación de tornamesa",
-                    description:"Evaluación estructural y funcional del sistema de acople para prevenir fallas operativas",
-                    image: null
-                },
+                 
                 {
                     title: "Certificación de king pin",
                     description:"Inspección del perno rey para garantizar su correcto estado y funcionamiento conforme a la normativa vigente.",
                     image: kingpinImage,
-                },
-                 {
-                    title: "Certificación de tren de apoyo",
-                    description:"Inspección técnica que asegura la estabilidad y seguridad del vehículo durante carga, descarga y estacionamiento.",
-                    image: null
                 },
                 {
                     title: "Pruebas de hermeticidad e hidrostáticas",
@@ -52,6 +46,16 @@ export const services:ServiceType[] = [
                     title: "Certificación de líneas de vida",
                     description:"Inspección y certificación de sistemas de protección contra caídas, garantizando la seguridad del personal. ",
                     image: lineasVidaImage,
+                },
+                {
+                    title: "Certificación de tornamesa",
+                    description:"Evaluación estructural y funcional del sistema de acople para prevenir fallas operativas",
+                    image: tornamesaImage
+                },
+                {
+                    title: "Certificación de tren de apoyo",
+                    description:"Inspección técnica que asegura la estabilidad y seguridad del vehículo durante carga, descarga y estacionamiento.",
+                    image: trenImage
                 }
        ]
     },
@@ -157,7 +161,7 @@ export const normasIzaje: NormsProps = {
         },
         {
             title: "ANSI Z359.18",
-            description: "Certificacion líneas de vida de acuerdo a la normatividad para trabajo en alturas 4272/2021"
+            description: "Certificación líneas de vida de acuerdo a la normatividad para trabajo en alturas 4272/2021"
         }
     ]
 }

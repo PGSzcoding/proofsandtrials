@@ -38,27 +38,31 @@ export default function Contact() {
                   const Wrapper = item.href ? "a" : "div";
 
                   return (
+                    <Wrapper
+                      key={`${item.label}${i}x`}
+                      href={item.href}
+                      target={item.href ? "_blank" : undefined}
+                      rel={item.href ? "noopener noreferrer" : undefined}
+                      className="flex  gap-4 pt-4 first:pt-0 group transition-all items-center"
+                    >
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-500 text-white shadow-lg shadow-sky-500/10 group-hover:bg-sky-400 transition-colors duration-300">
+                        <Icon />
+                      </div>
 
-<Wrapper
-  key={`${item.label}${i}x`}
-  href={item.href}
-  target={item.href ? "_blank" : undefined}
-  rel={item.href ? "noopener noreferrer" : undefined}
-  className="flex items-start gap-4 pt-4 first:pt-0 group transition-all"
->
-  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-500 text-white shadow-lg shadow-sky-500/10 group-hover:bg-sky-400 transition-colors duration-300">
-    <Icon />
-  </div>
-
-  <div className="flex min-w-0 flex-col break-words">
-    <span className="text-xs font-semibold uppercase tracking-wider text-sky-400">
-      {item.label}
-    </span>
-    <span className="mt-0.5 text-sm font-medium leading-snug text-slate-900 md:text-base">
-      {item.value}
-    </span>
-  </div>
-</Wrapper>
+                      <div className="flex min-w-0 flex-col break-words ">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-sky-400">
+                          {item.label}
+                        </span>
+                        <span className="mt-0.5 text-sm font-medium leading-snug text-slate-900 md:text-base">
+                          {item.array?
+                          item.array.map(val=>{
+                            return <p className="pt-1 text-sm"><a href={val.href}>{val.val}</a></p>
+                          })
+                          :item.value}
+                        </span>
+                      </div>
+                      
+                    </Wrapper>
                 )})}
               </div>
             </div>

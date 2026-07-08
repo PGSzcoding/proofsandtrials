@@ -17,7 +17,7 @@ export default function Hero() {
               Soluciones confiables con altos estándares de calidad y personal capacitado.
             </p>
 
-            <a href="#contact"  className="inline-flex items-center justify-center rounded-full px-10 py-4 text-lg font-medium transition duration-300 cursor-pointer bg-white text-slate-900 hover:bg-sky-400 hover:text-white mt-10">Solicita tu servicio</a>
+            <a href="/#contacto"  className="inline-flex items-center justify-center rounded-full px-10 py-4 text-lg font-medium transition duration-300 cursor-pointer bg-white text-slate-900 hover:bg-sky-400 hover:text-white mt-10">Solicita tu servicio</a>
           </Fade>
           </div>
         </Container>

@@ -1,6 +1,7 @@
 import { Eye, Mail, MapPin, Phone, RefreshCcw, Target } from "lucide-react";
 import misionImage from "../assets/historia.png";
 import visionImage from "../assets/vision.png";
+import { href } from "react-router-dom";
 
 export const menuItems = [
       { label: "Inicio", to: "/#inicio", section: "inicio" },
@@ -11,16 +12,13 @@ export const menuItems = [
 
 export const contactInfo = [
   {
-    label: "Telefono",
-    value: "313 323 81 46",
+    label: "Telefonos",
     icon: Phone,
-    href: "https://wa.me/+573133238146"
-  },
-  {
-    label: "Telefono",
-    value: "313 487 99 83",
-    icon: Phone,
-    href: "https://wa.me/+573134879983"
+    array: [
+     {val: "+57 313 323 81 46",href:'https://wa.me/+573133238146'},
+     {val:  "+57 313 487 99 83", href: "https://wa.me/+573134879983"},
+     {val: "+57 315 431 48 00", href: "https://wa.me/+573154314800"}
+    ]
   },
   {
     label: "Email",
