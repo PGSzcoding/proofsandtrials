@@ -18,22 +18,26 @@ export default function ServicesPage() {
             <div className="absolute right-0 top-0 h-80 w-80 rounded-full border border-sky-400/30 translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-10 right-40 h-px w-96 rotate-[-12deg] bg-sky-400/40" />
 
-            <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-16 lg:px-8 text-center">
-              <Fade direction="down">
-              <h1 className="mt-6  text-3xl font-bold tracking-tight text-white md:text-5xl">
+            <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-14 lg:px-8 text-center">
+              <Fade direction="down" cascade>
+              <h1 className="mt-2  text-3xl font-bold tracking-tight text-white md:text-5xl">
                 Nuestros servicios
               </h1>
+                <div className="mx-auto mt-6 h-1 w-20 rounded-full bg-sky-400" />
+
+                <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
+                  Ingeniería, inspección y confiabilidad para la industria colombiana.
+                </p>
               </Fade>
             </div>
         </section>
     
 
-        <section className="w-full  px-4 py-16 md:px-10"  id="top">
+        <section className="w-full  pt-16 pb-8 md:py-16 md:px-10"  id="top">
          
             <Container className="relative ">
                 <ServiceTransport title={servicios_transp.title} subtitle={servicios_transp.subtitle} items={servicios_transp.items}/>
                 <ServiceInspection title={inspeccion.title} subtitle={inspeccion.subtitle} items={inspeccion.items}/>
-               
             </Container>
             
         </section>  

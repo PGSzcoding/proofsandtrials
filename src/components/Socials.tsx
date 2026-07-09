@@ -1,14 +1,14 @@
 import {
   FaInstagram,
   FaWhatsapp,
-  FaFacebook,
+  FaLinkedin,
 } from "react-icons/fa";
 
 export function Socials(){
     return (
         <div className="flex gap-4 mt-6">
             <a href="https://www.facebook.com/" target="_blanc">
-                <FaFacebook  className="text-2xl hover:text-sky-500 transition" />
+                <FaLinkedin className="text-2xl hover:text-sky-500 transition" />
             </a>
 
             <a href="https://www.instagram.com/" target="_blanc">

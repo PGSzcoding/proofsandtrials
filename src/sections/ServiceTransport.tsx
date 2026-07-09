@@ -1,7 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { ServicioTransporteProps } from "../types/services";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {  Navigation } from "swiper/modules";
+import {  Autoplay, Navigation } from "swiper/modules";
 import TransportCard from "../components/TransportCard";
 import { Fade } from "react-awesome-reveal";
 import RegulationsAccordion from "./RegulationsAccordion";
@@ -28,8 +28,8 @@ export default function ServiceTransport({title,subtitle,items}:ServicioTranspor
 
                 <Fade>
                    <div className="relative px-8">
-                <Swiper  modules={[Navigation]} navigation={{ prevEl: ".prev", nextEl: ".next",}}
-                  spaceBetween={24} slidesPerView={4}  
+                <Swiper  modules={[Navigation,Autoplay]} navigation={{ prevEl: ".prev", nextEl: ".next",}} loop   autoplay={{ delay: 2500,
+                  disableOnInteraction: false, pauseOnMouseEnter: true,}}  spaceBetween={24} slidesPerView={4}  
                   breakpoints={{  0: { slidesPerView: 1 },  768: { slidesPerView: 3 }, 1024: { slidesPerView: 4 },}}>
                   {items.map((item, index) => (
                     <SwiperSlide key={index}>

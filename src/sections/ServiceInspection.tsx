@@ -15,7 +15,7 @@ export default function ServiceInspection({title,subtitle,items}:ServicioTranspo
                 </Fade>
             </div>
             <Fade direction="up">
-            <div className="grid gap-x-10 md:gap-x-16 lg:gap-x-16 gap-y-5 md:grid-cols-2 grid-cols-2 lg:grid-cols-3 mt-10">
+            <div className="grid ml-4 gap-x-10 md:gap-x-16 lg:gap-x-16 gap-y-5 md:grid-cols-2 grid-cols-2 lg:grid-cols-3 mt-10">
                 {items.map((element) => {
                     return (
                        <div key={element.title}

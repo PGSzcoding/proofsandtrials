@@ -5,7 +5,7 @@ import { servicesGalery } from "../data/services";
 
 export default function ServicesGallery() {
   return (
-    <section id="services" className="bg-slate-950 relative overflow-hidden  w-full   px-4 md:py-36 py-20 md:px-10"  >
+    <section id="services" className="bg-slate-950 relative overflow-hidden  w-full   px-4 md:pt-36 md:pb-28 py-20 md:px-10"  >
       
  {/* Fondo degradado */}
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(14,165,233,0.30),_transparent_35%),radial-gradient(circle_at_bottom_left,_rgba(2,132,199,0.20),_transparent_30%)]" />

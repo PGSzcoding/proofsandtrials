@@ -47,7 +47,7 @@ export default function RegulationsAccordion({description,norms}:NormsProps) {
             <div className="mt-3 space-y-4">
               {norms.map(val=>{
                 return(
-                  <div>
+                  <div key={val.title}>
                   <h5 className="font-semibold">{val.title}</h5>
                   <p className="text-sm text-slate-600">{val.description} </p>
                 </div>

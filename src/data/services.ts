@@ -12,6 +12,7 @@ import ganchoImage from "../assets/servicios/s_6.png";
 import poleasImage from "../assets/servicios/s_7.png";
 import anillosImage from "../assets/servicios/s_8.png";
 import tornamesaImage from "../assets/servicios/s_9.png";
+import aforoImage from "../assets/servicios/s_11.png";
 import trenImage from "../assets/servicios/s_10.png";
 
 
@@ -64,6 +65,11 @@ export const services:ServiceType[] = [
                     title: "Certificación de espesores por ultra sonido",
                     description: "",
                     image: espesorImage
+                },
+                {
+                    title: "Tablas de aforo",
+                    description: "calibración de tanques y recipientes, permitiendo determinar con precisión el volumen almacenado en función del nivel del líquido.",
+                    image: aforoImage
                 }
        ]
     },
