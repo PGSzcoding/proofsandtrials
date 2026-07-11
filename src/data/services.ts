@@ -1,19 +1,19 @@
-import quintaRuedaImage from "../assets/servicios/quinta_rueda.png";
-import kingpinImage from "../assets/servicios/king_pin.png";
-import hermeticidadImage from "../assets/servicios/hermeticidad.png";
-import lineasVidaImage from "../assets/servicios/lineas_vida.png";
-import cadenaImage from "../assets/servicios/s_cadenas.png";
-import grilletrImage from "../assets/servicios/s_2.png";
-import rachesImage from "../assets/servicios/s_3.png";
-import espesorImage from "../assets/servicios/espesores.png";
-import pasadoresImage from "../assets/servicios/s_4.png";
-import platosImage from "../assets/servicios/s_5.png";
-import ganchoImage from "../assets/servicios/s_6.png";
-import poleasImage from "../assets/servicios/s_7.png";
-import anillosImage from "../assets/servicios/s_8.png";
-import tornamesaImage from "../assets/servicios/s_9.png";
-import aforoImage from "../assets/servicios/s_11.png";
-import trenImage from "../assets/servicios/s_10.png";
+import quintaRuedaImage from "../assets/servicios/quinta_rueda.webp";
+import kingpinImage from "../assets/servicios/king_pin.webp";
+import hermeticidadImage from "../assets/servicios/hermeticidad.webp";
+import lineasVidaImage from "../assets/servicios/lineas_vida.webp";
+import cadenaImage from "../assets/servicios/s_cadenas.webp";
+import grilletrImage from "../assets/servicios/s_2.webp";
+import rachesImage from "../assets/servicios/s_3.webp";
+import espesorImage from "../assets/servicios/espesores.webp";
+import pasadoresImage from "../assets/servicios/s_4.webp";
+import platosImage from "../assets/servicios/s_5.webp";
+import ganchoImage from "../assets/servicios/s_6.webp";
+import poleasImage from "../assets/servicios/s_7.webp";
+import anillosImage from "../assets/servicios/s_8.webp";
+import tornamesaImage from "../assets/servicios/s_9.webp";
+import aforoImage from "../assets/servicios/s_11.webp";
+import trenImage from "../assets/servicios/s_10.webp";
 
 
 import type { NormsProps, TransporteItem } from "../types/services";

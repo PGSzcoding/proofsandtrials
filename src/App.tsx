@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
-import Services2Page from "./pages/Services2Page";
 import CertificatePage from "./pages/CertificatePage";
 import AdminLayout from "./layouts/AdminLayout";
 import LoginPage from "./pages/LoginPage";
@@ -10,6 +9,7 @@ import AdminCertificates from "./pages/AdminPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";
+import ServicesPage from "./pages/ServicesPage";
 function App() {
   return (
     <main className="min-h-screen">
@@ -21,7 +21,7 @@ function App() {
           {/* Página normal */}
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/servicios" element={<Services2Page />} />
+            <Route path="/servicios" element={<ServicesPage />} />
             <Route 
               path="/consulta-certificado" 
               element={<CertificatePage />} 

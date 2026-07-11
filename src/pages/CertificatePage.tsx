@@ -1,5 +1,5 @@
 import Container from "../components/Container";
-import certificateImage from "../assets/consulta.png";
+import certificateImage from "../assets/consulta.webp";
 import { useState } from "react";
 import SelectField from "../components/SelectField";
 import { Fade } from "react-awesome-reveal";

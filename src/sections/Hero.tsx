@@ -1,5 +1,5 @@
 import { Fade } from "react-awesome-reveal";
-import heroImage from "../assets/hero.png";
+import heroImage from "../assets/hero.webp";
 import Container from "../components/Container";
 
 export default function Hero() {

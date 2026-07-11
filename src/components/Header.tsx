@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import logoImage from "../assets/logo-2.png";
-import logoImage2 from "../assets/logo-3.png";
+import logoImage from "../assets/logo.png";
+import logoImage2 from "../assets/logo-blanco.png";
 import Container from "./Container";
 import { useEffect, useState } from "react";
 import { menuItems } from "../data/general";
