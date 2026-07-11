@@ -12,7 +12,7 @@ export default function ServicesPage() {
     const montacarga = services[2]
     return (
       <main>
-        <section className="relative destello overflow-hidden bg-gradient-to-r from-slate-950 via-slate-900 to-slate-800 text-center">
+        <section id="top" className="relative destello overflow-hidden bg-gradient-to-r from-slate-950 via-slate-900 to-slate-800 text-center">
             <div className="absolute  inset-0 bg-cover bg-center opacity-35" style={{ backgroundImage: `url(${heroImage})`,}}/>
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/40" />
             <div className="absolute right-0 top-0 h-80 w-80 rounded-full border border-sky-400/30 translate-x-1/2 -translate-y-1/2" />
@@ -33,7 +33,7 @@ export default function ServicesPage() {
         </section>
     
 
-        <section className="w-full  pt-16 pb-8 md:py-16 md:px-10"  id="top">
+        <section className="w-full  pt-16 pb-8 md:py-16 md:px-10"  >
          
             <Container className="relative ">
                 <ServiceTransport title={servicios_transp.title} subtitle={servicios_transp.subtitle} items={servicios_transp.items}/>

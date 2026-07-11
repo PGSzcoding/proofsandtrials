@@ -17,7 +17,7 @@ export default function About() {
               <LineSeparator />
             </Zoom>
             <p className="mt-6 leading-7 text-slate-600">
-              <b>Proofs and Trials P&T S.A.S.</b> es una compañía colombiana <b>con más de 7 años de experiencia</b>, especializada en <b>ensayos no destructivos</b>, que aplica diversos métodos de inspección bajo <b>altos estándares de calidad</b>, avalados por los entes de control.
+              <b>Proofs and Trials P&T S.A.S.</b> es una compañía colombiana <b>con más de 7 años de experiencia</b>, especializada en <b>ensayos no destructivos</b>, que aplica diversos métodos de inspección mediante <b>altos estándares de calidad</b>, avalados por los entes de control.
             </p>
           </Fade>
         </div>

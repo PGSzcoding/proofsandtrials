@@ -7,7 +7,7 @@ import {
 export function Socials(){
     return (
         <div className="flex gap-4 mt-6">
-            <a href="https://www.facebook.com/" target="_blanc">
+            <a href="https://www.linkedin.com/" target="_blanc">
                 <FaLinkedin className="text-2xl hover:text-sky-500 transition" />
             </a>
 

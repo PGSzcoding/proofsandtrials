@@ -5,7 +5,7 @@ import visionImage from "../assets/vision.png";
 export const menuItems = [
       { label: "Inicio", to: "/#inicio", section: "inicio" },
       { label: "Nosotros", to: "/#nosotros", section: "nosotros" },
-      { label: "Servicios", to: "/servicios", section: "servicios" },
+      { label: "Servicios", to: "/servicios#top", section: "servicios" },
       { label: "Contacto", to: "/#contacto", section: "contacto" },
     ];
 
@@ -72,11 +72,11 @@ export const AboutInfo = [
 
 export const CertificateOptions = [
     {
-      label: "Prueba hidrostática anual,",
+      label: "Prueba hidrostática anual",
       value: "hidrostatica",
     },
      {
-      label: "Prueba hidrostática 5 años,",
+      label: "Prueba hidrostática 5 años",
       value: "hidrostatica",
     },
     {
