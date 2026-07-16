@@ -82,11 +82,11 @@ export default function CertificatePage() {
                   <SelectField label="Tipo de certificado" value={certificateType} onChange={setCertificateType} placeholder="Selecciona un tipo" options={CertificateOptions} className="mb-4"/>
 
                   {certificateType && <Fade cascade>
-                    <>
+                    <div>
                       <label className={labelClasses}> Placa </label>
                       <input type="text"placeholder="" value={certificatePlaca} onChange={(e) => setCertificatePlaca(e.target.value)}
                       className="w-full rounded-full border border-slate-300  px-6 py-4 outline-none transition focus:border-sky-700"/>
-                    </>
+                    </div>
                     <button type="submit" disabled={loading}  className={`inline-flex mt-5 w-full px-8 py-4 font-semibold ${buttonStyles.primary}`}>
                       Consultar {loading && <span className="ms-2"><Spinner /></span>}
                     </button>
