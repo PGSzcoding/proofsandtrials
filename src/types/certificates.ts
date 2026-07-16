@@ -1,6 +1,7 @@
 export type Certificate = {
   key: string;
   id: string;
-  type:string;
+  tipo:string;
+  clave:string;
   createdAt: string
 };

@@ -1,10 +1,12 @@
 import { Fade } from "react-awesome-reveal";
-import heroImage from "../assets/hero.webp";
+import { buttonStyles } from "../styles/general";
 import Container from "../components/Container";
+import heroImage from "../assets/hero.webp";
+
 
 export default function Hero() {
   return (
-    <section style={{backgroundImage:`url(${heroImage})`}} className="destello parallax relative h-[90vh] parralax" id="inicio">
+    <section style={{backgroundImage:`url(${heroImage})`}} className="destello parralax relative h-[90vh] " id="inicio">
       <div className="absolute inset-0 bg-black/40" />
         <Container className="relative z-10 flex h-full items-center">
           <div className="max-w-2xl text-left">
@@ -16,8 +18,7 @@ export default function Hero() {
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/90 md:text-xl">
               Soluciones confiables con altos estándares de calidad y personal capacitado.
             </p>
-
-            <a href="/#contacto"  className="inline-flex items-center justify-center rounded-full px-10 py-4 text-lg font-medium transition duration-300 cursor-pointer bg-white text-slate-900 hover:bg-sky-400 hover:text-white mt-10">Solicita tu servicio</a>
+            <a href="/#contacto"  className={`${buttonStyles.white} inline-flex px-10 py-4 text-lg font-medium mt-10`}>Solicita tu servicio</a>
           </Fade>
           </div>
         </Container>

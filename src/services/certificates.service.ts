@@ -1,12 +1,13 @@
 import { ENV } from "../config/env";
+import type { Certificate } from "../types/certificates";
 
 interface FilesResponse {
   files: Certificate[];
   count: number;
 }
 
-interface Certificate {
-  key: string;
+interface SearchResponse {
+  certificates: Certificate[];
 }
 
 interface DownloadResponse {
@@ -20,9 +21,9 @@ interface UploadUrlResponse {
 }
 
 interface Metadata{
-  id: string;
   key: string;
-  type: string;
+  tipo: string;
+  clave:string;
 }
 
 export async function getFiles():Promise<FilesResponse>{
@@ -40,7 +41,7 @@ export async function getDownloadUrl(key: string): Promise<DownloadResponse> {
   const response = await fetch(`${ENV.API_URL}/download-url`,{
       method: "POST",
       headers: {"Content-Type": "application/json",},
-      body: JSON.stringify({key,}),}
+      body: JSON.stringify({key}),}
   );
 
   const data = await response.json();
@@ -51,10 +52,9 @@ export async function getDownloadUrl(key: string): Promise<DownloadResponse> {
   return data;
 }
 
-export async function deleteCertificate(key:string){
+export async function deleteCertificate(id:string){
 
-  console.log(`${key}`)
-  const response = await fetch(`${ENV.API_URL}/files/${key}`,{method:"DELETE"});
+  const response = await fetch(`${ENV.API_URL}/files/${id}`,{method:"DELETE"});
 
   if(!response.ok){
     throw new Error("Delete failed");
@@ -73,10 +73,31 @@ export async function saveFileMetadata(data: Metadata) {
     },
     body: JSON.stringify(data),
   });
-
   if (!response.ok) {
     throw new Error("Error guardando metadata");
   }
+}
+
+export async function searchCertificateByClave(
+  clave: string
+): Promise<SearchResponse> {
+  const normalizedClave = clave.trim();
+
+  if (!normalizedClave) {
+    throw new Error("Escribe una clave");
+  }
+
+  const response = await fetch(`${ENV.API_URL}/search?clave=${encodeURIComponent(normalizedClave )}`
+  );
+
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(
+      result.message || "No se pudo buscar el certificado"
+    );
+  }
+  return result;
 }
 
 export async function getCertificateById(id: string) {
@@ -118,7 +139,6 @@ export async function uploadFile(file: File): Promise<{ key: string }>{
     headers: {"Content-Type": data.headers?.["Content-Type"] || contentType,},
     body: file,
   });
-  console.log(uploadResponse)
 
   if (!uploadResponse.ok) {
     throw new Error(`Error al subir archivo (${uploadResponse.status})`);

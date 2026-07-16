@@ -1,8 +1,9 @@
 import { useState } from "react";
-import toast from "react-hot-toast";
-import {  saveFileMetadata, uploadFile } from "../services/certificates.service";
 import { Spinner } from "./Spinner";
 import { CertificateOptions } from "../data/general";
+import { saveFileMetadata, uploadFile } from "../services/certificates.service";
+import toast from "react-hot-toast";
+import { buttonStyles } from "../styles/general";
 
 interface AddFileProps{
     fileAdded: () => void;
@@ -10,7 +11,6 @@ interface AddFileProps{
 
 export function AddFileModal({fileAdded}:AddFileProps){
     const [loading, setLoading] = useState(false);
-
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [tipoArchivo, setTipoArchivo] = useState('');
     const [idPlaca, setIdPlaca] = useState('');
@@ -24,7 +24,7 @@ export function AddFileModal({fileAdded}:AddFileProps){
 
       try {
         const  key  = await uploadFile(selectedFile);
-        await saveFileMetadata({ id: idPlaca, key: key.key, type: tipoArchivo,});
+        await saveFileMetadata({ key: key.key, tipo: tipoArchivo,clave:idPlaca});
 
         toast.success(`"${selectedFile.name}" subido correctamente`);
         setSelectedFile(null);
@@ -46,26 +46,22 @@ export function AddFileModal({fileAdded}:AddFileProps){
     }
 
     return(
-        <form className=" flex-col flex gap-2">
-              <select  name="tipoArchivo"  id="tipoArchivo"  value={tipoArchivo}  onChange={handleTipoArchivoChange} 
-                className="w-full rounded-full border border-slate-300 px-4 py-3 outline-none transition focus:border-sky-700 text-sm">
-                <option value="">Selecciona tipo de archivo</option>
-                {CertificateOptions.map(val=>{
-                  return <option value={val.value}>{val.label}</option>
-                })}
-                
-              </select>
+      <form className=" flex-col flex gap-2">
+          <select  name="tipoArchivo"  id="tipoArchivo"  value={tipoArchivo}  onChange={handleTipoArchivoChange}  className="w-full rounded-full border border-slate-300 px-4 py-3 outline-none transition focus:border-sky-700 text-sm">
+            <option value="">Selecciona tipo de archivo</option>
+            {CertificateOptions.map(val=>{
+              return <option key={val.value} value={val.value}>{val.label}</option>
+            })}
+          </select>
 
-              <input  type="text"  placeholder="Id / Placa" value={idPlaca} onChange={handleIdPlacaChange} className="rounded-full border border-slate-300 px-4 py-3 text-sm"/>
+          <input  type="text"  placeholder="Id / Placa" value={idPlaca} onChange={handleIdPlacaChange} className="rounded-full border border-slate-300 px-4 py-3 text-sm"/>
               
-              <input type="file" accept="application/pdf" onChange={(e) => setSelectedFile(e.target.files?.[0] ?? null)} className="rounded-full border border-slate-300 px-4 py-3 text-sm"/>
+          <input type="file" accept="application/pdf" onChange={(e) => setSelectedFile(e.target.files?.[0] ?? null)} className="rounded-full border border-slate-300 px-4 py-3 text-sm"/>
                
-              <button type="button" onClick={handleUpload}  disabled={!selectedFile || loading}  className="rounded-full bg-sky-400 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-500 disabled:cursor-not-allowed disabled:opacity-50">
-                  {loading ? <>
-                  <Spinner />
-                    <span>Subiendo</span>
-                  </> : "Subir"}
-              </button>
-        </form>
+          <button type="button" onClick={handleUpload}  disabled={(!selectedFile || idPlaca == "" || tipoArchivo == "") || loading}  className={`${buttonStyles.primary}  px-6 py-3 text-sm font-semibold mt-3`}>
+            {loading ?  <span className="flex justify-center gap-2">Subiendo <Spinner /></span>: "Subir"}
+          </button>
+
+      </form>
     )
 }

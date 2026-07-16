@@ -1,6 +1,8 @@
+import { Fade } from "react-awesome-reveal";
 import Container from "../components/Container";
 import colombiaMap from "../assets/mapa-colombia.png";
-import { Fade } from "react-awesome-reveal";
+import BlueText from "../components/UI/BlueText";
+import LineSeparator from "../components/UI/LineSeparator";
 
 export default function National(){
     return (
@@ -10,11 +12,9 @@ export default function National(){
                     <div className="flex flex-col items-center gap-10 lg:flex-row lg:justify-center lg:gap-16">
                         <div className="text-center lg:text-left">
                             <Fade direction="left" cascade>
-                                <span className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-500">
-                                    Presencia en Colombia
-                                </span>
+                                <BlueText className="font-semibold" textSeparation="0.35em">Presencia en Colombia</BlueText>
                                 <h2 className="mt-4 text-4xl font-bold leading-tight text-white md:text-5xl">Disponible a nivel nacional</h2>
-                                <div className="mx-auto mt-6 h-1 w-20 rounded-full bg-sky-400 lg:mx-0" />
+                                <LineSeparator className="mt-6 bg-sky-400 lg:mx-0 mx-auto" width="20" />
                             </Fade>
                         </div>
                         <div className="flex justify-center">

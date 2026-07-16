@@ -26,24 +26,18 @@ export default function Modal({
   if (!open) return null;
 
   return (
-    <div
-      onClick={onClose}
-      className="fixed inset-0 z-100 flex items-center justify-center bg-slate-900/60 p-4"
-    >
+    <div onClick={onClose} className="fixed inset-0 z-100 flex items-center justify-center bg-slate-900/60 p-4">
       <div
         onClick={(e) => e.stopPropagation()}
         className={`w-full ${sizes[size]} rounded-2xl bg-white shadow-2xl`}
       >
         {(title) && (
-          <div className="flex items-center justify-between border-b px-6 py-5">
+          <div className="flex items-center justify-between border-b border-slate-700 px-6 py-3">
             <h2 className="text-lg font-semibold text-slate-800">
               {title}
             </h2>
 
-            <button
-              onClick={onClose}
-              className="rounded-full p-2 transition hover:bg-slate-100"
-            >
+            <button onClick={onClose} className="rounded-full p-2 transition hover:bg-slate-100">
               <X size={20} />
             </button>
           </div>

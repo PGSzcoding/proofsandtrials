@@ -70,14 +70,25 @@ export const AboutInfo = [
     ]
 */
 
+export const KeyWords = [
+    "Líquidos penetrantes",
+    "Partículas magnéticas",
+    "Ultrasonido",
+    "Inspección visual",
+    "Certificación de equipos",
+    "Tabla de aforo",
+    "Líneas de vida",
+    "Hidrostática",
+  ];
+
 export const CertificateOptions = [
     {
       label: "Prueba hidrostática anual",
-      value: "hidrostatica",
+      value: "hidrostatica-anual",
     },
      {
       label: "Prueba hidrostática 5 años",
-      value: "hidrostatica",
+      value: "hidrostatica-5",
     },
     {
       label: "Certificación en Elementos de Izaje",
