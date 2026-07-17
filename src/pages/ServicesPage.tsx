@@ -6,7 +6,7 @@ import heroImage from "../assets/servicios.webp";
 import ServiceMontacarga from "../sections/ServiceMontacarga";
 import Container from "../components/Container"
 import LineSeparator from "../components/UI/LineSeparator";
-
+import SEO from "../components/SEO";
 
 export default function ServicesPage() {
     const servicios_transp = services[0]
@@ -15,7 +15,12 @@ export default function ServicesPage() {
     const title = "Nuestros servicios"
     const description ="Ingeniería, inspección y confiabilidad para la industria colombiana."
     
-    return (
+    return (<>
+      <SEO
+        title="Servicios"
+        description="Conoce nuestros servicios de inspección técnica, ultrasonido, líquidos penetrantes, partículas magnéticas y certificación de equipos."
+        canonical="/servicios"
+      />
       <main>
         <section id="top" className="relative destello overflow-hidden bg-linear-to-r from-slate-950 via-slate-900 to-slate-800 text-center">
             {/* Background */}
@@ -45,5 +50,5 @@ export default function ServicesPage() {
         <ServiceMontacarga  title={montacarga.title} subtitle={montacarga.subtitle} items={montacarga.items} />
 
       </main>
-    )
+   </>)
 }

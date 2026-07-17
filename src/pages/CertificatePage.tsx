@@ -9,6 +9,7 @@ import certificateImage from "../assets/consulta.webp";
 import SelectField from "../components/SelectField";
 import toast from "react-hot-toast";
 import BlueText from "../components/UI/BlueText";
+import SEO from "../components/SEO";
 
 export default function CertificatePage() {
   const labelClasses = 'mb-2 block text-sm font-medium text-slate-700'
@@ -51,7 +52,12 @@ export default function CertificatePage() {
         }
       }}
 
-  return (
+  return (<>
+      <SEO
+          title="Consulta"
+          description="Consulta y descarga certificados emitidos por Proofs and Trials utilizando la información de identificación del equipo."
+          canonical="/consulta-certificado"
+        />
     <main className=" pt-10">
       <Container className="min-h-[calc(100vh-260px)] flex items-center">
         <div className="grid w-full items-center gap-12 lg:grid-cols-2  pb-20">
@@ -100,5 +106,5 @@ export default function CertificatePage() {
         </div>
       </Container>
     </main>
-  );
+  </>);
 }
