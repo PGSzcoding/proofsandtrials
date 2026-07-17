@@ -10,8 +10,8 @@ import BlueText from "../components/UI/BlueText";
 
 export default function ServiceTransport({title,subtitle,items}:ServicioTransporteProps){
     const arrows = <div>
-                      <button className="prev absolute -left-6 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg transition hover:bg-sky-500 hover:text-white"><ChevronLeft size={22} /></button>
-                      <button className="next absolute -right-6 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg transition hover:bg-sky-500 hover:text-white"><ChevronRight size={22} /></button>
+                      <button aria-label="Ver servicio anterior" className="prev absolute -left-6 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg transition hover:bg-sky-500 hover:text-white"><ChevronLeft size={22} aria-hidden="true" /></button>
+                      <button aria-label="Ver servicio siguiente" className="next absolute -right-6 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg transition hover:bg-sky-500 hover:text-white"><ChevronRight size={22} aria-hidden="true" /></button>
                   </div>
     
     return (<>
