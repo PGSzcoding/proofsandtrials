@@ -5,6 +5,7 @@ import ServicesGallery from "../sections/ServicesGallery";
 import National from "../sections/National";
 import KeywordsMarquee from "../sections/KeywordsMarquee";
 import SEO from "../components/SEO";
+import OrganizationSchema from "../components/OrganizationSchema";
 export default function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Home() {
         canonical="/"
       />
 
+      <OrganizationSchema />
       <Hero />
       <About />
       <ServicesGallery />
