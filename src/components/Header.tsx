@@ -2,8 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Container from "./Container";
 import { menuItems } from "../data/general";
-import logoNegro from "../assets/logo.png";
-import logoBlanco from "../assets/logo-blanco.png";
+import logoNegro from "../assets/logo2_var1.png";
+import logoBlanco from "../assets/logo2_var1blanco.png";
 import { buttonStyles } from "../styles/general";
 
 
@@ -55,7 +55,7 @@ export default function Header() {
               {menuItems.map((item) => {
                 const active = isActiveItem(item.section, item.to);
                 return (
-                  <Link key={item.label} to={item.to} className={`relative px-5  py-2 ${location.pathname === "/servicios"? "text-white": "text-slate-700"} transition hover:text-sky-500 after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-sky-400 after:transition-all hover:after:w-8`}>
+                  <Link key={item.label} to={item.to} className={`relative px-5  py-2 ${location.pathname === "/servicios"? "text-white": "text-slate-700"} transition hover:text-[#0651DC] after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-[#0651DC] after:transition-all hover:after:w-8`}>
                     {item.label}
                     <span  className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-slate-700 transition-all duration-300 ${active ? "w-8" : "w-0"}`} />
                   </Link>

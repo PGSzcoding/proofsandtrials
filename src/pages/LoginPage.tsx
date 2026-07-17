@@ -1,15 +1,14 @@
 import { useState } from "react";
-import logoImage from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
-import toast from "react-hot-toast";
 import { login } from "../services/auth.service";
+import logoImage from "../assets/logo2.png";
+import toast from "react-hot-toast";
+import { buttonStyles } from "../styles/general";
+
 export default function LoginPage() {
-    const navigate = useNavigate();
-
-const [loading, setLoading] = useState(false);
-  const labelClasses = "mb-2 block text-sm font-medium text-slate-700"
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const inputClasses = "w-full rounded-full border border-slate-300 px-5 py-3 outline-none transition focus:border-sky-400"
-
   const [password, setPassword] = useState("")
   const [email, setEmail] = useState(() => {
     try {
@@ -48,45 +47,24 @@ async function handleSubmit(e: React.FormEvent) {
     <main className="flex min-h-screen items-center justify-center bg-slate-100 px-6">
       <div className="w-full max-w-md rounded-3xl bg-white p-10 shadow-lg">
         
-        <div className="mb-10 text-center">
-          <img  src={logoImage}  alt="P&T"  className="mx-auto h-20 w-auto"  />
-
-          <h1 className="mt-6 text-3xl font-bold text-slate-800">Administrador </h1>
-
+        <div className="mb-7 text-center">
+          <img  src={logoImage}  alt="P&T"  className="mx-auto h-40 w-auto"  />
+          <h1 className="mt-5 text-3xl font-bold text-slate-800">Administrador </h1>
           <p className="mt-2 text-sm text-slate-500">Ingresa tus datos para continuar</p>
         </div>
 
-
         <form onSubmit={handleSubmit}>
           <div>
-            <label className={labelClasses}>Correo</label>
-
-            <input
-              type="email"
-              placeholder="admin@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className={inputClasses}
-            />
+            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className={inputClasses}/>
           </div>
 
-
-          <div className="mt-5">
-            <label className={labelClasses}>Contraseña</label>
-
-            <input
-              type="password"
-              placeholder="••••••••"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className={inputClasses}
-            />
+          <div className="mt-2">
+            <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} className={inputClasses}/>
           </div>
 
-          <button type="submit" disabled={loading} className="mt-8 w-full cursor-pointer rounded-full bg-[#4EACE9] px-6 py-3 font-semibold text-white transition hover:bg-sky-500 disabled:opacity-50">
+          <button type="submit" disabled={loading} className={`${buttonStyles.primary} mt-5 w-full px-6 py-3 font-semibold`} >
             {loading ? "Ingresando..." : "Iniciar sesión"}
           </button>
-
         </form>
       </div>
     </main>

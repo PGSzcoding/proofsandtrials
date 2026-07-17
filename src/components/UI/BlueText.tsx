@@ -9,6 +9,6 @@ type Props = {
 
 export default function BlueText({className = '',size="sm",textSeparation="0.25em",children}:Props){
     return (
-        <span className={`text-${size} font-semibold uppercase tracking-[${textSeparation}] text-sky-400 ${className}`}>{children} </span>
+        <span className={`text-${size} font-semibold uppercase tracking-[${textSeparation}] text-[#0281FC] ${className}`}>{children} </span>
     )
 }

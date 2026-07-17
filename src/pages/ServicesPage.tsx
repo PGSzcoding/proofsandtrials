@@ -28,7 +28,7 @@ export default function ServicesPage() {
             <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-14 lg:px-8 text-center">
               <Fade direction="down" cascade>
                 <h1 className="mt-2  text-3xl font-bold tracking-tight text-white md:text-5xl">{title}</h1>
-                <LineSeparator className="mx-auto mt-6 bg-sky-400" width="20" />
+                <LineSeparator className="mx-auto mt-6 bg-[#0281FC]" width="20" />
                 <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">{description}</p>
               </Fade>
             </div>

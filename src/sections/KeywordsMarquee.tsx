@@ -4,7 +4,7 @@ import { KeyWords } from "../data/general";
 export default function KeywordsMarquee() {
   return (
     <Fade>
-      <section className="overflow-hidden  border-sky-400/20 bg-sky-600 py-5">
+      <section className="overflow-hidden  border-sky-400/20 bg-[#0281FC] py-5">
         <div className="marquee">
           <div className="marquee-content ">
             {[...KeyWords, ...KeyWords].map((item, index) => (

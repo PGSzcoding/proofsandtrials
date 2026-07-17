@@ -15,7 +15,7 @@ export default function ServiceMontacarga({title,subtitle,items}:ServicioTranspo
             <div>
                 <Fade cascade direction="left">
                     <h2 className="text-4xl font-bold tracking-tight text-white md:text-5xl">{title}</h2>
-                    <LineSeparator className="mt-3 bg-sky-400" />
+                    <LineSeparator className="mt-3 bg-[#0281FC]" />
                     <p className="mt-6 text-lg leading-8 text-slate-400">{subtitle}</p>
                 </Fade>
             </div>

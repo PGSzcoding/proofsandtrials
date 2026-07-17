@@ -15,7 +15,7 @@ export default function About() {
               Expertos en <span className="text-sky-600">ensayos no destructivos, inspecciones</span> y <span className="text-sky-600">certificaciones</span> técnicas
             </h2>
             <Zoom delay={200}>
-              <LineSeparator className="bg-sky-400 mt-4 mx-auto" />
+              <LineSeparator className="bg-[#0281FC] mt-4 mx-auto" />
             </Zoom>
             <p className="mt-6 leading-7 text-slate-600">
               <b>Proofs and Trials P&T S.A.S.</b> es una compañía colombiana <b>con más de 7 años de experiencia</b>, especializada en <b>ensayos no destructivos</b>, que aplica diversos métodos de inspección mediante <b>altos estándares de calidad</b>, avalados por los entes de control.

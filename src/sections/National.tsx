@@ -14,7 +14,7 @@ export default function National(){
                             <Fade direction="left" cascade>
                                 <BlueText className="font-semibold" textSeparation="0.35em">Presencia en Colombia</BlueText>
                                 <h2 className="mt-4 text-4xl font-bold leading-tight text-white md:text-5xl">Disponible a nivel nacional</h2>
-                                <LineSeparator className="mt-6 bg-sky-400 lg:mx-0 mx-auto" width="20" />
+                                <LineSeparator className="mt-6 bg-[#0281FC] lg:mx-0 mx-auto" width="20" />
                             </Fade>
                         </div>
                         <div className="flex justify-center">

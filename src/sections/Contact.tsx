@@ -15,7 +15,7 @@ export default function Contact() {
         <div className="mb-14 text-center">
           <Fade direction="down" cascade>
             <h2 className="mt-3 text-4xl font-bold">{title}</h2>
-            <LineSeparator className="mx-auto bg-sky-400 my-4" />
+            <LineSeparator className="mx-auto bg-[#0281FC] my-4" />
             <p className="mx-auto mt-5 max-w-2xl text-slate-950/60">{description}</p>
           </Fade>
         </div>
@@ -41,12 +41,12 @@ export default function Contact() {
                     <Wrapper key={`${item.label}${i}x`} href={item.href} target={item.href ? "_blank" : undefined}
                       rel={item.href ? "noopener noreferrer" : undefined}  className="flex  gap-4 pt-4 first:pt-0 group transition-all items-center">
                       
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-500 text-white shadow-lg shadow-sky-500/10 group-hover:bg-sky-400 transition-colors duration-300">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#0281FC] text-white shadow-lg shadow-sky-500/10 group-hover:bg-sky-400 transition-colors duration-300">
                         <Icon />
                       </div>
 
                       <div className="flex min-w-0 flex-col wrap-break-word ">
-                        <span className="text-xs font-semibold uppercase tracking-wider text-sky-400">{item.label}</span>
+                        <span className="text-xs font-semibold uppercase tracking-wider text-[#0281FC]">{item.label}</span>
                         <span className="mt-0.5 text-sm font-medium leading-snug text-slate-900 md:text-base">
                           {item.array?
                           item.array.map(val=>{

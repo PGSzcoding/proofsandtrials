@@ -36,7 +36,7 @@ export default function ServicesGallery() {
 
                 <div className="absolute inset-x-0 bottom-0 z-10 p-6 transition-transform duration-500 ease-out group-hover:-translate-y-2">
                     <h3 className="text-2xl font-bold text-white">{item.title}</h3>
-                    <LineSeparator className="mt-2 bg-sky-400" width="14" />
+                    <LineSeparator className="mt-2 bg-[#0281FC]" width="14" />
                 </div>
               </article>
             ))}
