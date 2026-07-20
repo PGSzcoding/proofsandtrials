@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { buttonStyles } from "../styles/general";
 
 interface AddFileProps{
-    fileAdded: () => void;
+    fileAdded: (clave:string) => void;
 }
 
 export function AddFileModal({fileAdded}:AddFileProps){
@@ -40,9 +40,9 @@ export function AddFileModal({fileAdded}:AddFileProps){
 
     function clearForm(){
       setTipoArchivo('')
-      setIdPlaca('')
       setSelectedFile(null)
-      fileAdded()
+      fileAdded(idPlaca)
+      setIdPlaca('')
     }
 
     return(

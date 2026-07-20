@@ -1,21 +1,32 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Spinner } from "../components/Spinner";
 import {searchCertificateByClave } from "../services/certificates.service";
 import type { Certificate } from "../types/certificates";
 import Container from "../components/Container";
 import CertificateItem from "../components/CertificateItem";
 
-export default function AdminSearch(){
+interface AdminSearchProps {
+  refreshValue: string | null;
+}
+
+export default function AdminSearch({ refreshValue }: AdminSearchProps){
+
     const [certificateId, setCertificateId] = useState("");
     const [loading, setLoading] = useState(false);
     const [foundFiles, setFoundFiles] = useState<Certificate[] | null | undefined>(null);
 
-    async function handleSearch(e?: React.FormEvent) {
+    useEffect(() => {
+    if (!refreshValue) return;
+    handleSearch(undefined,refreshValue);
+  }, [refreshValue]);
+
+    async function handleSearch(e?: React.FormEvent,value?: string) {
       e?.preventDefault();
       setFoundFiles(null)
       setLoading(true)
       try {
-        const data = await searchCertificateByClave(certificateId) 
+        const clave = value ?? certificateId;
+        const data = await searchCertificateByClave(clave) 
         setFoundFiles(data.certificates)
       } catch (error) {
         if (error instanceof Error) {setFoundFiles(undefined)}
@@ -23,6 +34,8 @@ export default function AdminSearch(){
         setLoading(false)
       }
     }
+
+
 
     function afterDelete(){
       if(foundFiles?.length==1){
@@ -54,7 +67,7 @@ export default function AdminSearch(){
                 <div className="px-6 py-10 text-center text-slate-500">Certificado no encontrado.</div>
               ) : (
                 foundFiles.map(item=>{
-                  return <CertificateItem item={item} afterDelete={afterDelete}/>
+                  return <CertificateItem key={item.id} item={item} afterDelete={afterDelete}/>
                 })
               )}
             </div>

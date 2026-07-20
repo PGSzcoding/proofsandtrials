@@ -9,9 +9,11 @@ import { buttonStyles } from "../styles/general";
 
 export default function AdminCertificates() {
   const [open, setOpen] = useState(false);
-
-  function fileAdded(){
+  const [refreshValue, setRefreshValue] = useState<string | null>(null);
+  function fileAdded(clave:string){
     setOpen(false)
+    setRefreshValue(clave);
+
   }
 
   return (
@@ -40,7 +42,7 @@ export default function AdminCertificates() {
         </Container>
       </section>
      
-     <AdminSearch />
+     <AdminSearch refreshValue={refreshValue} />
 
     </main>
   );
