@@ -21,9 +21,11 @@ export const contactInfo = [
   },
   {
     label: "Email",
-    value: "gerenciapytsas@gmail.com",
     icon: Mail,
-    href: "mailto:gerenciapytsas@gmail.com"
+    array: [
+     {val: "gerencia@proofsandtrials.com",href:'mailto:gerencia@proofsandtrials.com'},
+     {val:  "comercial@proofsandtrials.com", href: "comercial@proofsandtrials.com"},
+    ]
   },
   {
     label: "Direccion",
