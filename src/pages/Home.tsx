@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <SEO
         title="Inicio"
-        description="Proofs and Trials P&T S.A.S. es una compañía colombiana con más de 7 años de experiencia, especializada en ensayos no destructivos, que aplica diversos métodos de inspección mediante altos estándares de calidad, avalados por los entes de control."
+        description="Proofs and Trials P&T S.A.S. es una empresa colombiana especializada en ensayos no destructivos, inspección industrial, ingeniería y servicios de confiabilidad, con más de 7 años de experiencia."
         canonical="/"
       />
 

@@ -35,11 +35,10 @@ export default function Contact() {
               <div className="divide-y divide-white/5 space-y-4">
                 {contactInfo.map((item,i) => {
                     const Icon = item.icon;
-                  const Wrapper = item.href ? "a" : "div";
+                  const Wrapper =  "div"; //item.href ? "a"  href={item.href} target={item.href ? "_blank" : undefined}:rel={item.href ? "noopener noreferrer" : undefined} 
 
                   return (
-                    <Wrapper key={`${item.label}${i}x`} href={item.href} target={item.href ? "_blank" : undefined}
-                      rel={item.href ? "noopener noreferrer" : undefined}  className="flex  gap-4 pt-4 first:pt-0 group transition-all items-center">
+                    <Wrapper key={`${item.label}${i}x`}  className="flex  gap-4 pt-4 first:pt-0 group transition-all items-center">
                       
                       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#0281FC] text-white shadow-lg shadow-sky-500/10 group-hover:bg-sky-400 transition-colors duration-300">
                         <Icon />
