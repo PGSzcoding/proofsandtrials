@@ -28,7 +28,7 @@ export default function Footer() {
             <Socials />
           </div>
           <div className="border-t border-white/10 py-2 text-center text-xs text-white/50">
-            Desarrollado por @Paolagtzsal
+            <a href="mailto:paolagtzsal@gmail.com">Desarrollado por @Paolagtzsal</a>
           </div>
         </Container>
       </footer>
