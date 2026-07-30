@@ -1,4 +1,5 @@
 import { MessageCircle } from "lucide-react";
+import { updateButtonClicked } from "../services/certificates.service";
 
 export default function WhatsAppButton({
   phone = "573133238146",
@@ -6,8 +7,16 @@ export default function WhatsAppButton({
 }) {
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
+   async function onBtnClick() {
+        try {
+          await updateButtonClicked() 
+        } catch (error) {
+          if (error instanceof Error) {console.log(error.message)}
+        } 
+      }
   return (
     <a
+      onClick={onBtnClick}
       href={url}
       target="_blank"
       rel="noopener noreferrer"

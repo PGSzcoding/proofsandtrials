@@ -6,6 +6,7 @@ import Modal from "../components/modal/Modal";
 import { AddFileModal } from "../components/AddFileForm";
 import AdminSearch from "../sections/AdminSearch";
 import { buttonStyles } from "../styles/general";
+import ClickCounter from "../components/ClickCounter";
 
 export default function AdminCertificates() {
   const [open, setOpen] = useState(false);
@@ -43,6 +44,7 @@ export default function AdminCertificates() {
       </section>
      
      <AdminSearch refreshValue={refreshValue} />
+    <ClickCounter/>
 
     </main>
   );

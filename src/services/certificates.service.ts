@@ -118,6 +118,39 @@ export async function getCertificateById(id: string) {
   return data;
 }
 
+export async function getButtonCount() {
+  const response = await fetch(`${ENV.API_URL}/count`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    }
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.error || "No se pudo encontrar");
+  }
+  console.log(data)
+  return data.clave;
+}
+
+export async function updateButtonClicked() {
+  const response = await fetch(`${ENV.API_URL}/increase`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.error || "No se pudo buscar el certificado");
+  }
+
+  return data;
+}
 
 export async function uploadFile(file: File): Promise<{ key: string }>{
   const token = localStorage.getItem("token");
